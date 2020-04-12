@@ -16,11 +16,11 @@ Recordad que Firefox únicamente soporta http sobre TLS. Solo verás http2 en ac
 
 ![transparent http2 use](https://raw.githubusercontent.com/bagder/http2-explained/master/images/firefox-screenshot.png)
 
-No existe ningún elementos en la interfaz de usuario que nos diga que se está hablando http2. No es fácilmente detectable. Un modo de averiguarlo es activar “Web developer->Network” y comprobar las cabeceras de respuesta para ver que está enviando el servidor. La respuesta será entonces “HTTP/2.0” y algo más. Firefox inserta su propia cabecera denominada “X-Firefox-Spdy:” como se aprecia en la captura de pantalla de arriba.
-Las cabeceras que se ven en la herramienta de red al utilizar http2 han sido convertidas desde el formato binario de http2, para parecerse al estilo clásico de las cabeceras de HTTP 1.x.No existe ningún elementos en la interfaz de usuario que nos diga que se está hablando http2. No es fácilmente detectable. Un modo de averiguarlo es activar “Web developer->Network” y comprobar las cabeceras de respuesta para ver que está enviando el servidor. La respuesta será entonces “HTTP/2.0” y algo más. Firefox inserta su propia cabecera denominada “X-Firefox-Spdy:” como se aprecia en la captura de pantalla de arriba.
+No existe ningún elementos en la interfaz de usuario que nos diga que se está hablando http2. No es fácilmente detectable. Un modo de averiguarlo es activar “Web developer-&gt;Network” y comprobar las cabeceras de respuesta para ver que está enviando el servidor. La respuesta será entonces “HTTP/2.0” y algo más. Firefox inserta su propia cabecera denominada “X-Firefox-Spdy:” como se aprecia en la captura de pantalla de arriba. Las cabeceras que se ven en la herramienta de red al utilizar http2 han sido convertidas desde el formato binario de http2, para parecerse al estilo clásico de las cabeceras de HTTP 1.x.No existe ningún elementos en la interfaz de usuario que nos diga que se está hablando http2. No es fácilmente detectable. Un modo de averiguarlo es activar “Web developer-&gt;Network” y comprobar las cabeceras de respuesta para ver que está enviando el servidor. La respuesta será entonces “HTTP/2.0” y algo más. Firefox inserta su propia cabecera denominada “X-Firefox-Spdy:” como se aprecia en la captura de pantalla de arriba.
 
 Las cabeceras que se ven en la herramienta de red al utilizar http2 han sido convertidas desde el formato binario de http2, para parecerse al estilo clásico de las cabeceras de HTTP 1.x.
 
 ## 9.4. Visualizar el uso de http2
 
 Existen plugins de Firefox disponibles que ayudan a visualizar si un sitio está usando HTTP/2. Uno de ellos es [“SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/).
+

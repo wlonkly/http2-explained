@@ -8,8 +8,9 @@ Hâlâ http'de neyin eksik olduğunu düşünüyorsunuz?
 
 ## 12.1. QUIC
 
-Google'ın [QUIC] (https://www.chromium.org/quic) (Hızlı UDP İnternet Bağlantıları) protokolü, SPDY ile aynı tarzda ve ruhta çok ilginç bir deneydir. QUIC, UDP kullanılarak gerçekleştirilen TCP + TLS + HTTP / 2 birleşimidir.
+Google'ın \[QUIC\] \([https://www.chromium.org/quic](https://www.chromium.org/quic)\) \(Hızlı UDP İnternet Bağlantıları\) protokolü, SPDY ile aynı tarzda ve ruhta çok ilginç bir deneydir. QUIC, UDP kullanılarak gerçekleştirilen TCP + TLS + HTTP / 2 birleşimidir.
 
 QUIC, çok daha az gecikme ile bağlantıların oluşturulmasına izin verir, sadece HTTP / 2 için olduğu gibi her biri için değil, bireysel akışları engellemek için de paket kaybını çözer ve farklı ağ arayüzleri üzerinden kolayca bağlantı yapılmasını sağlar, dolayısıyla MPTCP'nin çözeceği alanları da kapsar.
 
-QUIC şimdiye kadar yalnızca Google tarafından Chrome'da uygulanmaktadır ve bu kod, bir [libquic] (https://github.com/devsisters/libquic) çabasıyla tam olarak çalışılsa bile başka yerlerde kolayca yeniden kullanılamaz. Protokol IETF ulaştırma çalışma grubuna [taslak] (https://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) olarak getirildi.
+QUIC şimdiye kadar yalnızca Google tarafından Chrome'da uygulanmaktadır ve bu kod, bir \[libquic\] \([https://github.com/devsisters/libquic](https://github.com/devsisters/libquic)\) çabasıyla tam olarak çalışılsa bile başka yerlerde kolayca yeniden kullanılamaz. Protokol IETF ulaştırma çalışma grubuna \[taslak\] \([https://tools.ietf.org/html/draft-tsvwg-quic-protocol-01](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-01)\) olarak getirildi.
+

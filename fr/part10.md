@@ -4,12 +4,11 @@ L'équipe Chromium a implémenté http2 depuis un certain temps via les canaux b
 
 Le support SPDY sera retiré. Dans un blog, il est annoncé en [février 2015](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html):
 
-> “Chrome supporte SPDY depuis Chrome 6, mais comme les bénéfices sont présents
-dans HTTP/2, il est temps de lui dire au revoir. Le support SPDY sera retiré début 2016.”
+> “Chrome supporte SPDY depuis Chrome 6, mais comme les bénéfices sont présents dans HTTP/2, il est temps de lui dire au revoir. Le support SPDY sera retiré début 2016.”
 
 ## 10.1. Assurez-vous de l'activer
 
-Allez sur "chrome://flags/#enable-spdy4" dans la barre d'URL et cliquez sur "enable" si ce n'est déjà fait.
+Allez sur "chrome://flags/\#enable-spdy4" dans la barre d'URL et cliquez sur "enable" si ce n'est déjà fait.
 
 ## 10.2. TLS uniquement
 
@@ -21,4 +20,5 @@ Il existe des plug-ins Chrome permettant de visualiser si un site utilise http2.
 
 ## 10.4. QUIC
 
-Les tests QUIC en cours masquent un peu les résultats HTTP/2. (voir chapitre 12.1)
+Les tests QUIC en cours masquent un peu les résultats HTTP/2. \(voir chapitre 12.1\)
+

@@ -24,21 +24,21 @@ curlは多くのTLSライブラリをサポートしていて、これはhttp2�
 
 ## 11.4. コマンドラインでの使用
 
-curlにhttp2を使うように指示するには、平文、TLSに関係なく、`--http2`オプションを使います（”
-ダッシュ ダッシュ http2”）。curlはまだデフォルトがHTTP 1.1であり、http2を使う場合は追加のオプションが必要なのです。
+curlにhttp2を使うように指示するには、平文、TLSに関係なく、`--http2`オプションを使います（” ダッシュ ダッシュ http2”）。curlはまだデフォルトがHTTP 1.1であり、http2を使う場合は追加のオプションが必要なのです。
 
 ## 11.5. libcurlのオプション
 
 ### 11.5.1 HTTP/2を有効にする
 
-アプリケーションではhttps://やhttp:// URLを今までどおり使いますが、http2を使うにはcurl_easy_setoptの`CURLOPT_HTTP_VERSION`オプションを`CURL_HTTP_VERSION_2`にします。こうすることで出来る限りhttp2を使うようになりますが、それができない場合はHTTP 1.1が使われます。
+アプリケーションでは[https://やhttp://](https://やhttp://) URLを今までどおり使いますが、http2を使うにはcurl\_easy\_setoptの`CURLOPT_HTTP_VERSION`オプションを`CURL_HTTP_VERSION_2`にします。こうすることで出来る限りhttp2を使うようになりますが、それができない場合はHTTP 1.1が使われます。
 
 ### 11.5.2 多重化
 
-libcurlは既存の振る舞いを維持しようとするので、HTTP/2の多重化をアプリケーションで有効にするには[CURLMOPT_PIPELINING](https://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html)オプションを使います。このオプションを使わない場合、今まで同様に接続あたりの同時リクエスト数は1になります。
+libcurlは既存の振る舞いを維持しようとするので、HTTP/2の多重化をアプリケーションで有効にするには[CURLMOPT\_PIPELINING](https://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html)オプションを使います。このオプションを使わない場合、今まで同様に接続あたりの同時リクエスト数は1になります。
 
-もうひとつ注意してほしいことは、multiインターフェースをつかって複数の転送を同時にlibcurlで行う場合、複数の接続が使われることになります。libcurlを少し待たせて同じ接続にすべての転送を多重化するには、待たせる転送に対して[CURLOPT_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html)オプションを使います。
+もうひとつ注意してほしいことは、multiインターフェースをつかって複数の転送を同時にlibcurlで行う場合、複数の接続が使われることになります。libcurlを少し待たせて同じ接続にすべての転送を多重化するには、待たせる転送に対して[CURLOPT\_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html)オプションを使います。
 
 ### 11.5.3 サーバープッシュ
 
-libcurl 7.44.0以降はHTTP/2サーバープッシュをサポートしています。この機能を使うには[CURLMOPT_PUSHFUNCTION](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html)オプションを使ってプッシュコールバックをセットします。プッシュがアプリケーションによって受け入れられた場合、新しいCURL easy handleが作成されて、他の転送と同様にコンテンツを受信します。
+libcurl 7.44.0以降はHTTP/2サーバープッシュをサポートしています。この機能を使うには[CURLMOPT\_PUSHFUNCTION](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html)オプションを使ってプッシュコールバックをセットします。プッシュがアプリケーションによって受け入れられた場合、新しいCURL easy handleが作成されて、他の転送と同様にコンテンツを受信します。
+

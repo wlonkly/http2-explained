@@ -4,13 +4,13 @@ HTTP 1.1, İnternet'teki neredeyse her şey için kullanılan bir protokoldür. 
 
 ## 2.1 HTTP 1.1 devasadır
 
-HTTP oluşturulduğunda ve dünyaya yayıldığında, muhtemelen basit ve anlaşılır bir protokol olarak algılanıyordu, fakat zaman bunun yanlış olduğunu kanıtladı. RFC 1945'de HTTP 1.0, 1996'da yayınlanan 60 sayfalık bir beyannamedir. HTTP 1.1'i açıklayan RFC 2616, yalnızca 3 sene sonra 1999'da yayınlanmıştır ve önemli ölçüde artış göstererek 176 sayfaya yükselmiştir. Bununla birlikte, IETF(İnternet Mühendisliği Görev Grubu) bu beyannamenin güncellemesi üzerinde çalışırken, bu beyanname bölünmüş ve toplamda daha büyük sayfa sayısı ile altı dokümana dönüştürülmüş(RFC7230 ve ailesi ile sonuçlanır). Herhangi bir sayımla, HTTP 1.1 büyüktür ve sayısız ayrıntı, incelik ve en azından çok sayıda isteğe bağlı parça içermektedir.
+HTTP oluşturulduğunda ve dünyaya yayıldığında, muhtemelen basit ve anlaşılır bir protokol olarak algılanıyordu, fakat zaman bunun yanlış olduğunu kanıtladı. RFC 1945'de HTTP 1.0, 1996'da yayınlanan 60 sayfalık bir beyannamedir. HTTP 1.1'i açıklayan RFC 2616, yalnızca 3 sene sonra 1999'da yayınlanmıştır ve önemli ölçüde artış göstererek 176 sayfaya yükselmiştir. Bununla birlikte, IETF\(İnternet Mühendisliği Görev Grubu\) bu beyannamenin güncellemesi üzerinde çalışırken, bu beyanname bölünmüş ve toplamda daha büyük sayfa sayısı ile altı dokümana dönüştürülmüş\(RFC7230 ve ailesi ile sonuçlanır\). Herhangi bir sayımla, HTTP 1.1 büyüktür ve sayısız ayrıntı, incelik ve en azından çok sayıda isteğe bağlı parça içermektedir.
 
 ## 2.2 Seçenekler dünyası
 
 HTTP 1.1'in daha sonraki uzantılar için kullanılabilecek çok sayıda minik ayrıntı ve seçeneğe sahip olma özelliği, neredeyse hiçbir uygulamanın hiçbir zaman hiçbir yerde uygulayamayacağı bir yazılım ekosistemi geliştirmiştir ve "hiçbir şey" kavramının tam olarak ne olduğunu söylemek mümkün değildir. Bu başlangıçta az kullanılan özelliklerin, çok az sayıda uygulamanın yapıldığı ve özelliklerini uygulayanlardan çok az yararlanıldığı bir duruma neden oldu.
 
-Daha sonraları, sunucu ve istemciler bu tür özelliklerin kullanımını arttırmaya başladığında, bu "birlikte çalışabilirlik" sorununa neden oldu. HTTP boruhattı, böyle bir özelliğin temel bir örneğidir. 
+Daha sonraları, sunucu ve istemciler bu tür özelliklerin kullanımını arttırmaya başladığında, bu "birlikte çalışabilirlik" sorununa neden oldu. HTTP boruhattı, böyle bir özelliğin temel bir örneğidir.
 
 ## 2.3 TCP’nin yetersiz kullanımı
 
@@ -18,19 +18,19 @@ HTTP 1.1, TCP'nin sunduğu tüm gücü ve performanstan tam anlamıyla yararlana
 
 Yıllar boyunca paralel olarak devam eden diğer girişimler TCP’nin bu kadar kolay değiştirilmediğini doğruladı ve bu nedenle hem TCP hem de protokolleri iyileştirmeye çalışıyoruz.
 
-Basitçe söylemek gerekirse, TCP daha fazla veri göndermek veya almak adına oluşabilecek duraklamalar ve boş sürelerden kaçınmak için daha iyi kullanılabilir. Sıradaki bölümlerde bu eksikliklerin bazıları vurgulanacaktır. 
+Basitçe söylemek gerekirse, TCP daha fazla veri göndermek veya almak adına oluşabilecek duraklamalar ve boş sürelerden kaçınmak için daha iyi kullanılabilir. Sıradaki bölümlerde bu eksikliklerin bazıları vurgulanacaktır.
 
 ## 2.4 Aktarım boyutları ve nesne sayısı
 
 Bugün Web'deki en popüler sitelerin bazılarına ve bunların ön sayfalarını indirmek için neye ihtiyaç olduğuna bakıldığında net bir model ortaya çıkıyor. Yıllar geçtikce alınan veri yavaş yavaş 1.9MB'ın üzerine çıkmıştır. Bu bağlamda daha önemli olan şey, her sayfayı görüntülemek için ortalama olarak yüzü aşkın bireysel kaynağa ihtiyaç duyulmasıdır.
 
-Aşağıdaki grafiğin gösterdiği gibi, eğilim bir süredir devam ediyor ve yakın zamanda bunun değişeceğine dair hiç bir gösterge yoktur. Grafik dünyadaki en popüler web sitelerine hizmet vermek için toplam aktarım boyutunun (yeşil renkte) ve ortalama olarak kullanılan toplam talep sayısının (kırmızı renkte) son dört yılda nasıl değiştiğini göstermektedir.
+Aşağıdaki grafiğin gösterdiği gibi, eğilim bir süredir devam ediyor ve yakın zamanda bunun değişeceğine dair hiç bir gösterge yoktur. Grafik dünyadaki en popüler web sitelerine hizmet vermek için toplam aktarım boyutunun \(yeşil renkte\) ve ortalama olarak kullanılan toplam talep sayısının \(kırmızı renkte\) son dört yılda nasıl değiştiğini göstermektedir.
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
 ## 2.5 Gecikme öldürür
 
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png)
 
 HTTP 1.1'in gecikmeye karşı çok hassas olması, kısmen HTTP boruhattının buyuk bir kullanıcı oranına sahip olması ile ilgilidir.
 
@@ -42,7 +42,7 @@ Gerçekten düşük gecikmeye ihtiyaç duyan başka bir kullanım örneği, vide
 
 HTTP Boru Hattı, bir önceki isteğe yanıt beklerken başka bir istek göndermenin bir yoludur. Bu durum bankadaki veya süper marketteki bir işlem alanında sıra oluşmasına çok benzer. Önünüzdeki kişi işini hızlıca halledecek dakik bir müşteri midir, yoksa işe başlamadan önce sonsuza dek süreceğine inanan sinir bozucu bir müşteri midir bilmiyorsunuz: satır başı engelleme işte budur.
 
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg)
 
 Satır seçimi konusunda dikkatli olabilirsiniz, bu yüzden doğru olduğunu gerçekten düşündüğünüz bir satırı seçebilirsiniz veya bazen kendinize ait yeni bir satırdan başlayabilirsiniz fakat bunun sonunda seçtiğiniz bu satırı değiştiremezsiniz.
 
@@ -51,3 +51,4 @@ Yeni bir satır oluşturmak da bir performans ve kaynak cezasıyla ilişkilidir,
 Bugün bile, 2015, çoğu masaüstü web tarayıcısında varsayılan olarak HTTP boruhattı devre dışı bırakılmıştır.
 
 Bu konuyla ilgili ekler Firefox'un [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354) adresinde bulunur.
+

@@ -8,14 +8,17 @@ El soporte para SPDY será cancelado próximamente. En una entrada de blog, el p
 
 ## 10.1. primero, asegurar que está activado
 
-Introducir “chrome://flags/#enable-spdy4" en la barra de direcciones del navegador y hacer click en “activar” (“enable”), si no está previamente activado.
+Introducir “chrome://flags/\#enable-spdy4" en la barra de direcciones del navegador y hacer click en “activar” \(“enable”\), si no está previamente activado.
 
 ## 10.2. Sólo TLS
 
 Recordar que Chrome sólo implementa http2 sobre TLS. Únicamente se verá http2 en acción con Chrome, al visitar sitios con https:// que ofrezcan soportes http2.
 
 ## 10.3. Visualizar el uso de http2
+
 Existen plugins de Chrome disponibles que ayudan a visualizar si un sitio está usando HTTP/2. Uno de ellos es [“SPDY Indicator”](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin).
 
 ## 10.4. QUIC
-Los experimentos actuales de Chrome con QUIC (ver sección 12.1), diluyen de alguna manera los número de HTTP/2.
+
+Los experimentos actuales de Chrome con QUIC \(ver sección 12.1\), diluyen de alguna manera los número de HTTP/2.
+

@@ -4,7 +4,7 @@ HTTP 1.1 has turned into a protocol used for virtually everything on the Interne
 
 ## 2.1 HTTP 1.1 is huge
 
-When HTTP was created and thrown out into the world, it was probably perceived as a rather simple and straightforward protocol, but time has proved that to be false. HTTP 1.0 in RFC 1945 is a 60-page specification released in 1996. RFC 2616 that describes HTTP 1.1 was released only three years later in 1999 and had grown significantly to 176 pages. Yet when we within IETF worked on the update to that spec, it was split up and converted into six documents with a much larger page count in total (resulting in RFC 7230 and family). By any count, HTTP 1.1 is big and includes a myriad of details, subtleties and, not the least, a lot of optional parts.
+When HTTP was created and thrown out into the world, it was probably perceived as a rather simple and straightforward protocol, but time has proved that to be false. HTTP 1.0 in RFC 1945 is a 60-page specification released in 1996. RFC 2616 that describes HTTP 1.1 was released only three years later in 1999 and had grown significantly to 176 pages. Yet when we within IETF worked on the update to that spec, it was split up and converted into six documents with a much larger page count in total \(resulting in RFC 7230 and family\). By any count, HTTP 1.1 is big and includes a myriad of details, subtleties and, not the least, a lot of optional parts.
 
 ## 2.2 A world of options
 
@@ -24,13 +24,13 @@ Simply put, TCP can be utilized better to avoid pauses or wasted intervals that 
 
 When looking at the trend for some of the most popular sites on the web today and what it takes to download their front pages, a clear pattern emerges. Over the years, the amount of data that needs to be retrieved has gradually risen up to and above 1.9MB. What is more important in this context is that, on average, over 100 individual resources are required to display each page.
 
-As the graph below shows, the trend has been going on for a while, and there is little to no indication that it will change anytime soon. It shows the growth of the total transfer size (in green) and the total number of requests used on average (in red) to serve the most popular web sites in the world, and how they have changed over the last four years.
+As the graph below shows, the trend has been going on for a while, and there is little to no indication that it will change anytime soon. It shows the growth of the total transfer size \(in green\) and the total number of requests used on average \(in red\) to serve the most popular web sites in the world, and how they have changed over the last four years.
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
 ## 2.5 Latency kills
 
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png)
 
 HTTP 1.1 is very latency sensitive, partly because HTTP pipelining is still riddled with enough problems to remain switched off to a large percentage of users.
 
@@ -42,7 +42,7 @@ Another use case requiring low latency is certain kinds of video, like video con
 
 HTTP pipelining is a way to send another request while waiting for the response to a previous request. It is very similar to queuing at a counter at the bank or in a supermarket: you just don't know if the person in front of you is a quick customer or that annoying one that will take forever before he/she is done. This is known as head-of-line blocking.
 
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg)
 
 Sure, you can attempt to pick the line you believe is the correct one, and at times you can even start a new line of your own. But in the end, you can't avoid making a decision. And once it is made, you cannot switch lines.
 
@@ -51,3 +51,4 @@ Creating a new line is also associated with a performance and resource penalty, 
 Even today, most desktop web browsers ship with HTTP pipelining disabled by default.
 
 Additional reading on this subject can be found in the Firefox [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+

@@ -10,16 +10,11 @@ Non sarebbe carino creare un protocollo più potente ? Si, si ..
 
 ## 4.1. L'IETF e il gruppo di lavoro HTTPbis
 
-La Internet Engineering Task Force (IETF) è una organizzazione che sviluppa e promuove gli standard dell'internet, soprattutto a livello di definizione di protocolli. Sono da sempre consosciuti per le serie di memo RFC riguardanti argomenti quali TCP, DNS e FTP, best practices, HTTP e numerose varianti che non si sono mai trasformate in niente di più.
+La Internet Engineering Task Force \(IETF\) è una organizzazione che sviluppa e promuove gli standard dell'internet, soprattutto a livello di definizione di protocolli. Sono da sempre consosciuti per le serie di memo RFC riguardanti argomenti quali TCP, DNS e FTP, best practices, HTTP e numerose varianti che non si sono mai trasformate in niente di più.
 
-All'interno di IETF, gruppi di lavoro dedicati sono stati istituiti al fine di lavorare in direzione di un obiettivo comune, in un dominio limitato. Stabiliscono un "charter" ed alcune linee-guida (e limiti) rispetto alle aspettative. Chiunque è benvenuto ad aggiungersi, a partecipare alla discussione e allo sviluppo. Chiunque partecipi e dica qualcosa di concreto ha lo stesso peso nell'influenzare l'esito del lavoro finale ed intermedio. Tutti i membri sono considerati allo stesso livello, senza troppa importanza rispetto al datore di lavoro.
+All'interno di IETF, gruppi di lavoro dedicati sono stati istituiti al fine di lavorare in direzione di un obiettivo comune, in un dominio limitato. Stabiliscono un "charter" ed alcune linee-guida \(e limiti\) rispetto alle aspettative. Chiunque è benvenuto ad aggiungersi, a partecipare alla discussione e allo sviluppo. Chiunque partecipi e dica qualcosa di concreto ha lo stesso peso nell'influenzare l'esito del lavoro finale ed intermedio. Tutti i membri sono considerati allo stesso livello, senza troppa importanza rispetto al datore di lavoro.
 
-Il gruppo di lavoro HTTPbis (vedi più avanti per la spiegazione del nome) è 
-stato formato durante l'estate 2007 ed incaricato di creare un aggiornamento 
-delle specifiche HTTP 1.1. All'interno del gruppo la discusssione a proposito
-di una futura versione è iniziata in tardo 2012. Il lavoro di aggiornamento su
-HTTP 1.1 è stato completato nel 2014 ed ha prodotto come risultato la serie di
-[RFC 7230](https://tools.ietf.org/html/rfc7230)
+Il gruppo di lavoro HTTPbis \(vedi più avanti per la spiegazione del nome\) è stato formato durante l'estate 2007 ed incaricato di creare un aggiornamento delle specifiche HTTP 1.1. All'interno del gruppo la discusssione a proposito di una futura versione è iniziata in tardo 2012. Il lavoro di aggiornamento su HTTP 1.1 è stato completato nel 2014 ed ha prodotto come risultato la serie di [RFC 7230](https://tools.ietf.org/html/rfc7230)
 
 Il meeting finale per il GdL HTTPbis inter-op si è tenuto a New York City ad inizio Giugno 2014. Le restanti discussioni e le procedure IETF svolte per pubblicare definitivamente la RFC si sono svolte fino all'anno successivo.
 

@@ -8,10 +8,9 @@ http2 non è ancora ne distribuito ne adodatto. Non possiamo ancora dire come le
 
 http2 riduce il numero di round-trip ed evita definitivamente l'eterno dilemma del "head-of-line blocking" attraverso l'utilizzo di multiplexing e fast-discarding degli stream non necessari.
 
-Permette un vasto ammontare di streams paralleli, numero ampiamente sufficiente anche per il sito più "sharded" (parallelizzato) del momento.
+Permette un vasto ammontare di streams paralleli, numero ampiamente sufficiente anche per il sito più "sharded" \(parallelizzato\) del momento.
 
-Utilizzando correttamente le priorità sugli streams il client sarà in grado di scaricare i dati importanti prima dei dati quelli meno utili.
-Visto tutto ciò, sono sicuro che beneficieremo di siti più reattivi, che si caricano in tempi più rapidi. Mettiamola così: una miglior esperienza del web.
+Utilizzando correttamente le priorità sugli streams il client sarà in grado di scaricare i dati importanti prima dei dati quelli meno utili. Visto tutto ciò, sono sicuro che beneficieremo di siti più reattivi, che si caricano in tempi più rapidi. Mettiamola così: una miglior esperienza del web.
 
 Quanto celere sarà questo miglioramento, staremo a vedere, non penso si possa ancora dire. Per prima cosa, la tecnologia è ancora in fase di lancio e non si sono ancora visti client/server che implementino a dovere questa tecnologia per sfruttarne tutte le potenzialità.
 
@@ -33,38 +32,23 @@ Un grande numero di implementazioni hanno preso vita fin dall'inizio ed altre si
 
 ### 8.3.1 Navigatori
 
-Firefox è il browser che più di altri ha seguito da vicino i rapidi sviluppi 
-delle ultimissime drafts, Twitter è rimasta al passo offrendo i suoi servizi
-su http2. Google ha iniziato verso Aprile 2014 ad offrire supporto per http2
-su un numero limitato di server di test e a partire da Maggio 2014 ha fornito
-supporto per http2 nelle versioni per sviluppatori Chrome. Microsoft da parte 
-sua ha dato una dimostrazione del supporto http2 in Internet Explorer. Safari
-(su iOS 9 e Mac OS X El Capitan) e Opera hanno entrambi annunciato supporto
-per http2 in future versioni.
+Firefox è il browser che più di altri ha seguito da vicino i rapidi sviluppi delle ultimissime drafts, Twitter è rimasta al passo offrendo i suoi servizi su http2. Google ha iniziato verso Aprile 2014 ad offrire supporto per http2 su un numero limitato di server di test e a partire da Maggio 2014 ha fornito supporto per http2 nelle versioni per sviluppatori Chrome. Microsoft da parte sua ha dato una dimostrazione del supporto http2 in Internet Explorer. Safari \(su iOS 9 e Mac OS X El Capitan\) e Opera hanno entrambi annunciato supporto per http2 in future versioni.
 
 ### 8.3.2 Servers
 
 Esistono gia molte implementazioni di server http2.
 
-Il popolare Nginx offre supporto per http2 gia dalla [1.9.5](https://www.nginx.com/blog/nginx-1-9-5/)
-rilasciata il 22 Settembre 2015 (dove rimpiazza il modulo SPDY, impedendo
-l'utilizzo contemporaneo di entrambi all'interno della stessa istanza.
+Il popolare Nginx offre supporto per http2 gia dalla [1.9.5](https://www.nginx.com/blog/nginx-1-9-5/) rilasciata il 22 Settembre 2015 \(dove rimpiazza il modulo SPDY, impedendo l'utilizzo contemporaneo di entrambi all'interno della stessa istanza.
 
-Apache's httpd server has a http2 module [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) since 2.4.17 which was released on October 9, 2015.
+Apache's httpd server has a http2 module [mod\_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) since 2.4.17 which was released on October 9, 2015.
 
-[H2O](https://h2o.examp1e.net/), [Apache Traffic
-Server](https://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
-[Caddy](https://caddyserver.com/) e
-[LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview)
-hanno tutti dimostrato di essere capaci di gestire richieste http2.
+[H2O](https://h2o.examp1e.net/), [Apache Traffic Server](https://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/), [Caddy](https://caddyserver.com/) e [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview) hanno tutti dimostrato di essere capaci di gestire richieste http2.
 
 ### 8.3.3 Altri
 
-curl e libcurl supportano http2 non-sicuro (testuale) e la versione TLS
-servendosi di una delle svrariate librerie TLS disponibili.
+curl e libcurl supportano http2 non-sicuro \(testuale\) e la versione TLS servendosi di una delle svrariate librerie TLS disponibili.
 
-Anche Wireshark supporta http2; strumento professionale per l'analisi
-del traffico di rete http2.
+Anche Wireshark supporta http2; strumento professionale per l'analisi del traffico di rete http2.
 
 ## 8.4. Critiche comuni a http2
 
@@ -90,21 +74,9 @@ Not at all. The multiplexing capabilities will greatly help to improve the exper
 
 ### 8.4.4. “Il fatto che usi TLS lo rende ancora più lento”
 
-This can be true to some extent. The TLS handshake does add a little extra,
-but there are existing and ongoing efforts on reducing the necessary
-round-trips even more for TLS. The overhead for doing TLS over the wire
-instead of plain-text is not insignificant and clearly notable so more CPU and
-power will be spent on the same traffic pattern as a non-secure protocol. How
-much and what impact it will have is a subject of opinions and
-measurements. See for example [istlsfastyet.com](https://istlsfastyet.com/)
-for one source of info.
+This can be true to some extent. The TLS handshake does add a little extra, but there are existing and ongoing efforts on reducing the necessary round-trips even more for TLS. The overhead for doing TLS over the wire instead of plain-text is not insignificant and clearly notable so more CPU and power will be spent on the same traffic pattern as a non-secure protocol. How much and what impact it will have is a subject of opinions and measurements. See for example [istlsfastyet.com](https://istlsfastyet.com/) for one source of info.
 
-Telecom and other network operators, for example in the ATIS Open Web
-Alliance, say that they [need unencrypted
-traffic](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)
-to offer caching, compression and other techniques necessary to provide a fast
-web experience over satellite, in airplanes and similar.  http2 does not make
-TLS use mandatory so we shouldn't conflate the terms.
+Telecom and other network operators, for example in the ATIS Open Web Alliance, say that they [need unencrypted traffic](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf) to offer caching, compression and other techniques necessary to provide a fast web experience over satellite, in airplanes and similar. http2 does not make TLS use mandatory so we shouldn't conflate the terms.
 
 Many Internet users have expressed a preference for TLS to be used more widely and we should help to protect users' privacy.
 
@@ -120,7 +92,7 @@ Se davvero non sopporti i protocolli binarii, allora non hai mai interagito con 
 
 ### 8.4.6. “Non è più veloce di nessun HTTP/1.1”
 
-Questo è ovviamente oggetto di dibattiti e discussioni animate riguardo la definizione di "velocità", benchè svariati test eseguiti al tempo di SPDY abbiano gia mostrato che il tempo di "page load" sia deavvero minore (per esempio ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) dell'Università di Washington e ["Evaluating the Performance of SPDY-enabled Web Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) di Hervé Servy) e chiaramente tali esperimenti sono stati ripetuti su http2.
+Questo è ovviamente oggetto di dibattiti e discussioni animate riguardo la definizione di "velocità", benchè svariati test eseguiti al tempo di SPDY abbiano gia mostrato che il tempo di "page load" sia deavvero minore \(per esempio ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) dell'Università di Washington e ["Evaluating the Performance of SPDY-enabled Web Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) di Hervé Servy\) e chiaramente tali esperimenti sono stati ripetuti su http2.
 
 Aspetto con ansia che altri risultati ed esperimenti simili vengano pubblicati. Un [primo semplice test eseguito da httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) sembra indicare che HTTP/2 stia mantenendo le proprie promesse.
 
@@ -148,5 +120,5 @@ I più grandi portali e operatori del web -fra cui Google, Twitter e Facebook- s
 
 Molte delle più famose case produttrici di proxy hanno annunciato di voler supportare http2, fra cui HAProxy, Squid e Varnish.
 
-Durante il corso del 2015, il traffico http2 è aumentato. A inizio Settembre il tasso di utilizzazione di Firefox 40 era al 13% su tutto il traffico HTTP e 27% su tutto il traffico HTTPS, mentre verso Google circa il 18% di richieste entranti sono in HTTP/2. Bisogna notare che allo stesso tempo Google è in procinto di sperimentare altri protocolli (vedi QUIC in 12.1) il che abbassa in qualche modo il tasso di connessioni http2 globali.
+Durante il corso del 2015, il traffico http2 è aumentato. A inizio Settembre il tasso di utilizzazione di Firefox 40 era al 13% su tutto il traffico HTTP e 27% su tutto il traffico HTTPS, mentre verso Google circa il 18% di richieste entranti sono in HTTP/2. Bisogna notare che allo stesso tempo Google è in procinto di sperimentare altri protocolli \(vedi QUIC in 12.1\) il che abbassa in qualche modo il tasso di connessioni http2 globali.
 

@@ -36,7 +36,7 @@ curl et libcurl supportent http2 non-TLS et TLS à partir d'une des librairies T
 
 ### 8.3.1. Implémentations manquantes
 
-Les deux serveurs les plus populaires, Apache HTTPD et Nginx, supportent tous deux SPDY mais à la date du 22 Septembre 2015, seul Nginx a publié une version supportant officiellement http2. Nginx a publié ["nginx-1.9.5"](https://www.nginx.com/blog/nginx-1-9-5/) et le module HTTP/2 pour Apache, nommé [mod_h2](https://icing.github.io/mod_h2/), est en bonne voie pour être embarqué "bientôt" dans une nouvelle version.
+Les deux serveurs les plus populaires, Apache HTTPD et Nginx, supportent tous deux SPDY mais à la date du 22 Septembre 2015, seul Nginx a publié une version supportant officiellement http2. Nginx a publié ["nginx-1.9.5"](https://www.nginx.com/blog/nginx-1-9-5/) et le module HTTP/2 pour Apache, nommé [mod\_h2](https://icing.github.io/mod_h2/), est en bonne voie pour être embarqué "bientôt" dans une nouvelle version.
 
 ## 8.4. Critiques courantes de http2
 
@@ -66,8 +66,7 @@ Les gros sites ont déjà une présence mondiale et du coup des aller-retours mo
 
 Cela peut se révéler vrai. La négociation TLS ajoute un peu de latence, mais il existe des projets pour réduire encore les aller-retours en TLS. La surcharge du TLS par rapport à du texte en clair n'est pas neutre et a un impact CPU. L'impact en lui-même est sujet à discussions et mesures. Voir par exemple [istlsfastyet.com](https://istlsfastyet.com/) pour avoir une source d'information.
 
-Les opérateurs télécom et réseaux, par exemple l'ATIS Open Web Alliance, indiquent qu'ils nécessitent du [trafic non chiffré](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf) pour permettre au cache et à la compression de fonctionner, notamment pour une expérience web rapide par satellite.
-http2 n'oblige pas à utiliser TLS, on ne devrait donc pas mélanger les deux.
+Les opérateurs télécom et réseaux, par exemple l'ATIS Open Web Alliance, indiquent qu'ils nécessitent du [trafic non chiffré](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf) pour permettre au cache et à la compression de fonctionner, notamment pour une expérience web rapide par satellite. http2 n'oblige pas à utiliser TLS, on ne devrait donc pas mélanger les deux.
 
 De nombreux utilisateurs ont indiqué leur préférence à utiliser TLS et nous devrions respecter ce droit à la vie privée.
 
@@ -83,7 +82,7 @@ Si vous ne pouvez pas vous faire à un protocole binaire, alors vous ne pouviez 
 
 ### 8.4.6. "Ce n'est pas plus rapide que HTTP/1.1"
 
-Cela est bien sûr sujet à débat sur comment qualifier "plus rapide"; les tests menés lors des expérimentations SPDY montraient des temps de chargement de pages web plus rapides (voir [“How Speedy is SPDY?”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) par University of Washington et [“Evaluating the Performance of SPDY-enabled Web Servers”](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) par Hervé Servy). Idem en http2 avec d'autres tests. Je souhaite voir davantage de tests publiés. Un [premier essai réalisé par httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) a tendance à montrer que HTTP/2 répond aux promesses.
+Cela est bien sûr sujet à débat sur comment qualifier "plus rapide"; les tests menés lors des expérimentations SPDY montraient des temps de chargement de pages web plus rapides \(voir [“How Speedy is SPDY?”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) par University of Washington et [“Evaluating the Performance of SPDY-enabled Web Servers”](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) par Hervé Servy\). Idem en http2 avec d'autres tests. Je souhaite voir davantage de tests publiés. Un [premier essai réalisé par httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) a tendance à montrer que HTTP/2 répond aux promesses.
 
 http2 est clairement plus rapide dans certains scénarios, en particulier avec les scénarios où une connexion à latence importante est utilisée avec un site comportant beaucoup de ressources à charger, ce nombre ayant tendance à augmenter.
 
@@ -113,4 +112,5 @@ Les plus gros proxy, HAProxy, Squid et Varnish ont mentionné leur intention de 
 
 Je pense qu'il y aura davantage d'implémentations quand la RFC sera ratifiée.
 
-Durant tout 2015, la quantité de trafic en http2 n'a cessé d'augmenter. Au début Septembre, sur Firefox 40, il génère 13% de tout le trafic HTTP, et 27% du trafic HTTPS, tandis que Google voit 18% de HTTP/2. Il faut noter que Google déroule d'autres expérimentations en parallèle (voir QUIC en 12.1), ce qui rend la quantité de trafic http2 plus basse que ce qu'elle aurait pu être.
+Durant tout 2015, la quantité de trafic en http2 n'a cessé d'augmenter. Au début Septembre, sur Firefox 40, il génère 13% de tout le trafic HTTP, et 27% du trafic HTTPS, tandis que Google voit 18% de HTTP/2. Il faut noter que Google déroule d'autres expérimentations en parallèle \(voir QUIC en 12.1\), ce qui rend la quantité de trafic http2 plus basse que ce qu'elle aurait pu être.
+

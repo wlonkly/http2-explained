@@ -14,12 +14,13 @@ Souvenez-vous que Firefox n'implémente http2 que sur TLS. Vous ne verrez du htt
 
 ## 9.3. Transparent!
 
-![ Copie d'écran montrant que Firefox utilise http2 draft-12](https://raw.githubusercontent.com/bagder/http2-explained/master/images/firefox-screenshot.png)
+![ Copie d&apos;&#xE9;cran montrant que Firefox utilise http2 draft-12](https://raw.githubusercontent.com/bagder/http2-explained/master/images/firefox-screenshot.png)
 
-Il n'y a pas d'indication graphique que vous utilisez http2. Vous ne pouvez pas le voir facilement. Une manière de le trouver est d'activer "Web developer->Network" et de vérifier l'en-tête de réponse. Elle doit comporter "HTTP/2.0", Firefox insère son propre entête "X-Firefox-Spdy:" comme montré sur la copie d'écran précédente.
+Il n'y a pas d'indication graphique que vous utilisez http2. Vous ne pouvez pas le voir facilement. Une manière de le trouver est d'activer "Web developer-&gt;Network" et de vérifier l'en-tête de réponse. Elle doit comporter "HTTP/2.0", Firefox insère son propre entête "X-Firefox-Spdy:" comme montré sur la copie d'écran précédente.
 
 Les en-têtes que vous voyez dans l'outil ont été convertis du format binaire http2 vers un format qui ressemble aux en-têtes HTTP 1.x.
 
 ## 9.4. Voir l'utilisation http2
 
 Il existe des plug-ins Firefox permettant de visualiser si un site utilise http2. En voici un [“SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/).
+

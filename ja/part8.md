@@ -38,10 +38,9 @@ Firefoxは最新ドラフトにもっとも速く追随してきたブラウザ�
 
 既に多くのサーバがhttp2をサポートしています。
 
-人気のあるNginxサーバは2015年9月22日の[1.9.5](https://www.nginx.com/blog/nginx-1-9-5/)からhttp2を提供しています。
-（SPDYモジュールの置き換えが必要で、SPDYモジュールとhttp2の共存はできません。）
+人気のあるNginxサーバは2015年9月22日の[1.9.5](https://www.nginx.com/blog/nginx-1-9-5/)からhttp2を提供しています。 （SPDYモジュールの置き換えが必要で、SPDYモジュールとhttp2の共存はできません。）
 
-Apacheのhttpdサーバは2015年10月9日にリリースされた2.4.17からhttp2モジュール [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) が提供されています。
+Apacheのhttpdサーバは2015年10月9日にリリースされた2.4.17からhttp2モジュール [mod\_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) が提供されています。
 
 [H2O](https://h2o.examp1e.net/)、[Apache Traffic Server](https://trafficserver.apache.org/)、[nghttp2](https://nghttp2.org/)、[Caddy](https://caddyserver.com/)、[LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview)は全てhttp2が使用できます。
 
@@ -120,3 +119,4 @@ Google、Twitter、Facebookといった巨大なサーバー事業者もhttp2を
 HAProxy、Squid、Varnishといった巨大プロキシーベンダーはhttp2サポートの意思を示しています。
 
 2015年全体を通して、HTTP/2のトラフィック量は増加しています。9月の初めにおいて、Firefox 40での使用率はHTTP全体の中の13%、HTTPSに限定すると27%でした。Googleは18%のトラフィックがhttp2だったと言っています。Googleは他の新しいプロトコルの実験も同時に行っている（12.1のQUICを参照してください）ので、http2の使用率は低く出てしまうことに注意してください。
+

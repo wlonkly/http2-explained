@@ -18,7 +18,7 @@ Bu protokolün hata ayıklamasının muhtemelen curl gibi araçlarla veya ağ ak
 
 ## 6.2. İkili format
 
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/frame-layout.png" />
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/frame-layout.png)
 
 http2, ikili çerçeveler gönderir. Gönderilebilen farklı çerçeve türleri de vardır ve hepsi aynı ayarlara sahiptir: Uzunluk, Tip, Bayraklar, Akış Tanımlayıcı ve çerçeve yükü.
 
@@ -32,8 +32,7 @@ Tek bir http2 bağlantısı, eş zamanlı birden fazla açık akış içerebilir
 
 Akışların çoğullaması, birçok akıştan gelen paketlerin aynı bağlantı üzerinden karışabilmesi anlamına gelir. İki bireysel tren tek bir tren haline gelebilir ve daha sonra diğer tarafta tekrar ayrılabilir.
 
-![one train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-justin.jpg)
-![another train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-ikea.jpg)
+![one train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-justin.jpg) ![another train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-ikea.jpg)
 
 İki tren aynı bağlantı üzerinden çoğullandı:
 
@@ -41,19 +40,19 @@ Akışların çoğullaması, birçok akıştan gelen paketlerin aynı bağlantı
 
 ## 6.4. Öncelikler ve Bağımlılıklar
 
-Her bir akış, sunucuyu öncelikle hangi akışların gönderileceğini seçmeye zorlayan kaynak kısıtlamaları olması durumunda, hangi akışın en önemli olduğunu söylemek için kullanılan bir öncelik(ağırlık olarak da bilinir) bilgisine sahiptir.
+Her bir akış, sunucuyu öncelikle hangi akışların gönderileceğini seçmeye zorlayan kaynak kısıtlamaları olması durumunda, hangi akışın en önemli olduğunu söylemek için kullanılan bir öncelik\(ağırlık olarak da bilinir\) bilgisine sahiptir.
 
-ÖNCELİK çerçevesini kullanarak bir istemci, sunucuya bir akışın bağlı olduğu diğer bir akışı da söyleyebilir. Bu istemciye öncelik agacı oluşturmasına izin verir  ki bu ağacda "cocuk akışlar" bircok "ebeveyn akışa" bağlı olabilir.
+ÖNCELİK çerçevesini kullanarak bir istemci, sunucuya bir akışın bağlı olduğu diğer bir akışı da söyleyebilir. Bu istemciye öncelik agacı oluşturmasına izin verir ki bu ağacda "cocuk akışlar" bircok "ebeveyn akışa" bağlı olabilir.
 
 Öncelik ağırlıkları ve bağımlılıkları çalışma zamanında etkin olarak değiştirilebilir, ki bu da, kullanıcılar görüntülerin bulunduğu bir sayfayı aşağıya kaydırdığında, tarayıcıların hangi görüntülerin en önemli olduğunu belirleyebilmesine veya sekmeleri değiştirirseniz, birdenbire odaklanacak yeni bir dizi akışın önceliğini oluşturabilmesine olanak tanır.
 
 ## 6.5. Başlık sıkıştırma
 
-HTTP yurtsuz(stateless) bir protokoldür. Kısaca, bu, sunucunun önceki isteklerden çok fazla bilgi ve meta veri depolaması gerekmeden, her talebin sunucunun bu talebi sunması için gereken kadar ayrıntılı getirmesi gerektiği anlamına gelir. Http2 bu paradigmayı değiştirmediği için aynı şekilde çalışması gerekir.
+HTTP yurtsuz\(stateless\) bir protokoldür. Kısaca, bu, sunucunun önceki isteklerden çok fazla bilgi ve meta veri depolaması gerekmeden, her talebin sunucunun bu talebi sunması için gereken kadar ayrıntılı getirmesi gerektiği anlamına gelir. Http2 bu paradigmayı değiştirmediği için aynı şekilde çalışması gerekir.
 
 Bu, HTTP'yi tekrarlı yapar. Bir müşteri bir web sayfasındaki, örneğin görüntüler gibi aynı sunucudan birçok kaynak istediğinde, hepsi için neredeyse aynı görünen bir istek dizisi talep edecektir. Sıklıkla aynı olan bu dizi sıkıştırma için yalvarır.
 
-Web sayfası başına düşen nesne sayısı arttıkça (önceden belirtildiği gibi), çerezlerin kullanımı ve isteklerin boyutu da zamanla artmaya devam etti. Çerezlerin tüm isteklerde bulunması gerekir, çoğu zaman aynı istek çoklu istekler içindedir.
+Web sayfası başına düşen nesne sayısı arttıkça \(önceden belirtildiği gibi\), çerezlerin kullanımı ve isteklerin boyutu da zamanla artmaya devam etti. Çerezlerin tüm isteklerde bulunması gerekir, çoğu zaman aynı istek çoklu istekler içindedir.
 
 HTTP 1.1 istek boyutları o kadar büyük oluyor ki bazen ilk TCP penceresinden daha büyük olabiliyor, bu da istek gönderilmeden önce sunucudan ACK almak için tam bir gidiş dönüş zamanına ihtiyaç duyduklarından göndermenin çok yavaş olmasına sebep oluyor. Sıkıştırmanın bir başka kanıtı bu durumdur.
 
@@ -61,32 +60,29 @@ HTTP 1.1 istek boyutları o kadar büyük oluyor ki bazen ilk TCP penceresinden 
 
 HTTPS ve SPDY sıkıştırmasının [BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) ve [CRIME](https://en.wikipedia.org/wiki/CRIME) saldırılarına karşı savunmasız olduğu tespit edildi. Bilinen metni akışa çıktıyı ekleyerek, nasıl değiştirdiğini öğrenebilir, böylece saldırgan şifreli bir yükte gönderileni anlamaya çalışabilir.
 
-Bir protokol için etkin içeriğe sıkıştırma yapmak biraz düşünülmesi ve dikkatli olması gereken bir konudur(saldırılardan birine karşı savunmasız hale gelmeden yapılır). HTTPbis ekibi bunu yapmaya çalıştı.
+Bir protokol için etkin içeriğe sıkıştırma yapmak biraz düşünülmesi ve dikkatli olması gereken bir konudur\(saldırılardan birine karşı savunmasız hale gelmeden yapılır\). HTTPbis ekibi bunu yapmaya çalıştı.
 
-[HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt) bakın, HPACK(adından da anlaşılacağı gibi), HTTP/2 için Başlık Sıkıştırmasıdır. Bu sıkıştırma biçimi özellikle http2 başlıkları için hazırlanmış olup, ayrı bir internet taslağında belirtilmektedir. Yeni format, diğer karşı ölçümlerle(belirli bir üstbilgiyi ve çerçevelerin dolgusunu(adding) sıkıştırmamasını sağlayan bir bit gibi), sıkıştırmanın kullanılmasını zorlaştırır.
+[HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt) bakın, HPACK\(adından da anlaşılacağı gibi\), HTTP/2 için Başlık Sıkıştırmasıdır. Bu sıkıştırma biçimi özellikle http2 başlıkları için hazırlanmış olup, ayrı bir internet taslağında belirtilmektedir. Yeni format, diğer karşı ölçümlerle\(belirli bir üstbilgiyi ve çerçevelerin dolgusunu\(adding\) sıkıştırmamasını sağlayan bir bit gibi\), sıkıştırmanın kullanılmasını zorlaştırır.
 
-Roberto Peon'un (HPACK'in yaratıcılarından biri) sözleriyle:
+Roberto Peon'un \(HPACK'in yaratıcılarından biri\) sözleriyle:
 
-> HPACK sızan bilgiyi önlemek,
-> kodlama ve kod çözme işlemini hem hızlandırmak hem ucuzlaştırmak,
-> sıkıştırılan içerik boyutu üzerinde alıcı adına kontrol sağlamak,
-> proxy'nin yeniden indexlenmesine izin vermek(yani, bir proxy içindeki ön uç ve arka uç arasında paylaşılan durum)
-> ve Huffman kodlu dizelerin çabuk karşılaştırmaları için tasarlandı.
+> HPACK sızan bilgiyi önlemek, kodlama ve kod çözme işlemini hem hızlandırmak hem ucuzlaştırmak, sıkıştırılan içerik boyutu üzerinde alıcı adına kontrol sağlamak, proxy'nin yeniden indexlenmesine izin vermek\(yani, bir proxy içindeki ön uç ve arka uç arasında paylaşılan durum\) ve Huffman kodlu dizelerin çabuk karşılaştırmaları için tasarlandı.
 
 ## 6.6. Sıfırla - fikrini değiştir
 
-HTTP 1.1'in getirdiği dezavantajlardan biri, belirli bir boyuta sahip bir İçerik-Uzunluğu ile bir HTTP mesajı gönderildiğinde, onu kolayca durdurmanızın mümkün olamayacağıdır. Tabi, TCP bağlantısını kesebilirsiniz (her zaman değil) ancak yine de yeni bir TCP el sıkışması yapmak zorunda kalmanız maliyetlidir.
+HTTP 1.1'in getirdiği dezavantajlardan biri, belirli bir boyuta sahip bir İçerik-Uzunluğu ile bir HTTP mesajı gönderildiğinde, onu kolayca durdurmanızın mümkün olamayacağıdır. Tabi, TCP bağlantısını kesebilirsiniz \(her zaman değil\) ancak yine de yeni bir TCP el sıkışması yapmak zorunda kalmanız maliyetlidir.
 
-Daha iyi bir çözüm, mesajı durdurup yeni bir başlangıç yapmak olacaktır. Bunu, boşa harcanmış bant genişliğini ve bağlantıları yıkma ihtiyacını önlemeye yardımcı olacak, http2'nin RST_STREAM çerçevesiyle yapabilirsiniz.
+Daha iyi bir çözüm, mesajı durdurup yeni bir başlangıç yapmak olacaktır. Bunu, boşa harcanmış bant genişliğini ve bağlantıları yıkma ihtiyacını önlemeye yardımcı olacak, http2'nin RST\_STREAM çerçevesiyle yapabilirsiniz.
 
 ## 6.7. Sunucu İtme
 
 Bu, "önbellek itme" olarak da bilinen özelliktir. Müşteri kaynak X sorduğunda, sunucu istemcinin istemcinin Z kaynağı da istediğini bilir ve sorulmadan istemciye gönderir. İstediğinde orada olacak şekilde Z'yi önbelleğine koyarak müşteriye yardımcı olur.
 
-Sunucu itme, istemcinin sunucuya açıkça izin vermesi gereken bir özelliktir. İstemci belirli bir kaynağı istemiyorsa, itilen bir akışı RST_STREAM ile hızla sonlandırabilir.
+Sunucu itme, istemcinin sunucuya açıkça izin vermesi gereken bir özelliktir. İstemci belirli bir kaynağı istemiyorsa, itilen bir akışı RST\_STREAM ile hızla sonlandırabilir.
 
 ## 6.8. Akış kontrolü
 
-Her bir http2 akışının kendi akış penceresi vardır, bu pencerede diğer ucun veri göndermesine izin verilir. SSH'ın nasıl çalıştığını biliyorsanız, çok benzer  olduğunu göreceksiniz.
+Her bir http2 akışının kendi akış penceresi vardır, bu pencerede diğer ucun veri göndermesine izin verilir. SSH'ın nasıl çalıştığını biliyorsanız, çok benzer olduğunu göreceksiniz.
 
 Her bir akış için, iki uçun da gelen veriyi işlemek için yeterli alana sahip olup olmadığı veya diğer uçta yalnızca pencere genişletilinceye kadar belirli miktarda veri gönderilmesine izin verilebileceği gibi durumları bildirmeye hakları vardır. Sadece VERİ çerçeveleri akış kontrollüdür.
+

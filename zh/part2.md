@@ -22,7 +22,7 @@ HTTP 1.1很难榨干TCP协议所能提供的所有性能。HTTP客户端和浏�
 
 ## 2.4 传输大小和资源数量
 
-如果仔细观察打开那些最流行的网站首页所需要下载的资源的话，会发现一个非常明显的趋势。  近年来加载网站首页需要的下载的数据量在逐渐增加，并已经超过了1.9MB。但在这里我们更应该关心的是：平均每个页面为了完成显示与渲染所需要下载的资源数已经超过了100个。
+如果仔细观察打开那些最流行的网站首页所需要下载的资源的话，会发现一个非常明显的趋势。 近年来加载网站首页需要的下载的数据量在逐渐增加，并已经超过了1.9MB。但在这里我们更应该关心的是：平均每个页面为了完成显示与渲染所需要下载的资源数已经超过了100个。
 
 正如下图所示，这种趋势已经持续了很长一段时间，并且没有减缓的迹象。该图表中绿色直线展示了传输数据大小的增长，红色直线展示了平均请求资源数量的增长。
 
@@ -30,7 +30,7 @@ HTTP 1.1很难榨干TCP协议所能提供的所有性能。HTTP客户端和浏�
 
 ## 2.5 恼人的延迟
 
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png)
 
 HTTP 1.1对网络延迟非常敏感。部分原因是HTTP pipelining还存有很多问题，所以对大部分用户来说这项技术是被默认关闭的。
 
@@ -40,9 +40,9 @@ HTTP 1.1对网络延迟非常敏感。部分原因是HTTP pipelining还存有很
 
 ## 2.6 线头阻塞（Head-of-line blocking）
 
-HTTP pipelining是这样一种技术：在等待上一个请求响应的同时，发送下一个请求。(译者注：作者这个解释并不完全正确，HTTP pipelining其实是把多个HTTP请求放到一个TCP连接中一一发送，而在发送过程中不需要等待服务器对前一个请求的响应；只不过，客户端还是要按照发送请求的顺序来接收响应。)但就像在超市收银台或者银行柜台排队时一样，你并不知道前面的顾客是干脆利索的还是会跟收银员/柜员磨蹭到世界末日（译者注：不管怎么说，服务器（即收银员/柜员）是要按照顺序处理请求的，如果前一个请求非常耗时（顾客磨蹭），那么后续请求都会受到影响），这就是所谓的线头阻塞（head-of-line blocking）。
+HTTP pipelining是这样一种技术：在等待上一个请求响应的同时，发送下一个请求。\(译者注：作者这个解释并不完全正确，HTTP pipelining其实是把多个HTTP请求放到一个TCP连接中一一发送，而在发送过程中不需要等待服务器对前一个请求的响应；只不过，客户端还是要按照发送请求的顺序来接收响应。\)但就像在超市收银台或者银行柜台排队时一样，你并不知道前面的顾客是干脆利索的还是会跟收银员/柜员磨蹭到世界末日（译者注：不管怎么说，服务器（即收银员/柜员）是要按照顺序处理请求的，如果前一个请求非常耗时（顾客磨蹭），那么后续请求都会受到影响），这就是所谓的线头阻塞（head-of-line blocking）。
 
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg)
 
 当然，你可以在选择队伍时候就做好功课，去排一个你认为最快的队伍，或者甚至另起一个新的队伍（译者注：即新建一个TCP连接）。但不管怎么样，你总归得先选择一个队伍，而且一旦选定之后，就不能更换队伍。
 
@@ -50,4 +50,5 @@ HTTP pipelining是这样一种技术：在等待上一个请求响应的同时�
 
 这就是为什么即使到了今天，大部分桌面浏览器仍然会选择默认关闭HTTP pipelining这一功能的原因。
 
-而关于这个问题的更多细节，可以参阅Firefox的 [bugzilla #264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354)。
+而关于这个问题的更多细节，可以参阅Firefox的 [bugzilla \#264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354)。
+

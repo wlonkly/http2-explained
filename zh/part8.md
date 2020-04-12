@@ -6,7 +6,7 @@
 
 到目前为止，http2还没被大范围部署使用，我们也无法确定到底会发生什么变化，但至少可以参考SPDY的例子和曾经做过的实验来进行大概的估计。
 
-http2减少了网络往返传输的数量，并且用多路复用和快速丢弃不需要的流的办法来完全避免了head of line blocking(线头阻塞)的困扰。
+http2减少了网络往返传输的数量，并且用多路复用和快速丢弃不需要的流的办法来完全避免了head of line blocking\(线头阻塞\)的困扰。
 
 它也支持大量并行流，所以即使网站的数据分发在各处也不是问题。
 
@@ -34,15 +34,15 @@ http2减少了网络往返传输的数量，并且用多路复用和快速丢弃
 
 ### 8.3.1. 浏览器
 
-Firefox一直紧跟最新的协议，Twitter也紧追不舍提供了基于http2的服务。2014年4月期间<!--『从2014年4月开始』会不会更符合原意？-->，Google在少数测试服务器上提供http2支持。从同年5月开始，开发版的Chrome支持http2。Microsoft也在他们的产品预发布会上展示了支持http2的下一代浏览器。Safari (iOS 9 以及 Mac OS X El Capitan) 和 Opera也都表态它们将会支持http2。
+Firefox一直紧跟最新的协议，Twitter也紧追不舍提供了基于http2的服务。2014年4月期间，Google在少数测试服务器上提供http2支持。从同年5月开始，开发版的Chrome支持http2。Microsoft也在他们的产品预发布会上展示了支持http2的下一代浏览器。Safari \(iOS 9 以及 Mac OS X El Capitan\) 和 Opera也都表态它们将会支持http2。
 
 ### 8.3.2 服务器
 
 事实上，已经有不少的服务器实现了http2。
 
-时下最流行的Nginx自1.9.5(发布于2015年9月22号)版本后提供了对http2的支持并且取缔了原来的SPDY模块(因此SPDY和http2无法同时运行在同一个Nginx服务器实例中)。
+时下最流行的Nginx自1.9.5\(发布于2015年9月22号\)版本后提供了对http2的支持并且取缔了原来的SPDY模块\(因此SPDY和http2无法同时运行在同一个Nginx服务器实例中\)。
 
-而Apache HTTPD服务器也实现了一个名为[mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html)的http2模块，并与2015年10月9号在2.4.17的版本中发布。
+而Apache HTTPD服务器也实现了一个名为[mod\_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html)的http2模块，并与2015年10月9号在2.4.17的版本中发布。
 
 此外，[H2O](https://h2o.examp1e.net/), [Apache Traffic Server](https://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/), [Caddy](https://caddyserver.com/) 以及 [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview) 也都发布了可以工作于http2下的服务器。
 
@@ -78,7 +78,7 @@ Wireshark同样支持了http2, 所以用它来分析http2网络数据流着实�
 
 这个评价在某种程度上是对的。虽然TLS的握手确实增加了额外的开销，但也有越来越多的方案提出来减少TLS往返的时间。使用TLS而不是纯文本带来的开销是显著的，有可观证据表明，和传输同样的流量相比，TLS会消耗更多的CPU和其他资源。具体影响有多大以及怎么影响是一个和具体测量有关的课题。更多的例子可以参看[istlsfastyet.com](https://istlsfastyet.com/)。
 
-Telecom和一些其他网络服务商，例如ATIS开放网络联盟，表示为了为卫星、飞机等提供的快速网络体验，他们需要一些[不加密的流量](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf )来提供caching，压缩和其他技术。
+Telecom和一些其他网络服务商，例如ATIS开放网络联盟，表示为了为卫星、飞机等提供的快速网络体验，他们需要一些[不加密的流量](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf%20)来提供caching，压缩和其他技术。
 
 由于http2并不强制要求使用TLS，所以我们不应该为此担心。
 
@@ -96,8 +96,7 @@ Telecom和一些其他网络服务商，例如ATIS开放网络联盟，表示为
 
 ### 8.4.6. “它根本没有比HTTP/1.1快”
 
-当然，到底该如何定义和衡量“快”就是另外一个话题了，但在SPDY的时代，已经有很多实验证明了该协议会让浏览器载入页面变得更快（例如华盛顿大学的[“SPDY有多快？”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)和Hervé Servy的[“评估启用SPDY后的Web服务器的性能”](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers/)），同样这些实验也可以被用来证明http2。我期待能有越来越多的诸如此类的测试实验结果发布。而这篇文章[httpwatch.com的一个简单测试](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2/)亦能证明HTTP/2名副其实。<!-- 那一句“我也期待XX”放在那怪怪的 -->
-
+当然，到底该如何定义和衡量“快”就是另外一个话题了，但在SPDY的时代，已经有很多实验证明了该协议会让浏览器载入页面变得更快（例如华盛顿大学的[“SPDY有多快？”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)和Hervé Servy的[“评估启用SPDY后的Web服务器的性能”](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers/)），同样这些实验也可以被用来证明http2。我期待能有越来越多的诸如此类的测试实验结果发布。而这篇文章[httpwatch.com的一个简单测试](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2/)亦能证明HTTP/2名副其实。
 
 ### 8.4.7. “它违反了网络分层”
 
@@ -105,7 +104,7 @@ Telecom和一些其他网络服务商，例如ATIS开放网络联盟，表示为
 
 ### 8.4.8. “它并没有修复很多HTTP/1.1的短板”
 
-确实是这样。兼容HTTP/1.1的范式是我们的目标之一，所以一些老的HTTP功能仍然被保留。例如一些常用的协议头、可怕的cookies、验证头等等。但保留这些范式的好处就是我们在升级到新协议的时候少掉很多工作，也不需要重写很多底层的东西。Http2其实只是一个新的帧层。<!-- 那个"可怕的"cookies该怎么翻译好？ -->
+确实是这样。兼容HTTP/1.1的范式是我们的目标之一，所以一些老的HTTP功能仍然被保留。例如一些常用的协议头、可怕的cookies、验证头等等。但保留这些范式的好处就是我们在升级到新协议的时候少掉很多工作，也不需要重写很多底层的东西。Http2其实只是一个新的帧层。
 
 ## 8.5. http2会被广泛部署吗？
 
@@ -124,3 +123,4 @@ Google向世界展示了他们的SPDY，证明了像这样的新协议也能在�
 那些大型代理程序开发者，例如HAProxy、Squid和Varnish也表示出了他们对支持http2的兴趣。
 
 纵观2015年，http2的流量正在逐步上升。9月初，Firefox 40中http2流量占据了所有HTTP流量中的13%，HTTPS中的27%。与此同时，Google表示约有18%的流量来自HTTP/2。值得注意的是，Google同时也在实验其他协议（参见12.1中的QUIC），这也使得http2的使用量暂时比正常值低一些。
+

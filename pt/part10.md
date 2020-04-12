@@ -8,7 +8,7 @@ O suporte SPDY será eventualmente removido. Em um artigo no blog, o projeto anu
 
 ## 10.1. Em primeiro lugar, verifique se está habilitado
 
-Digite “chrome://flags/#enable-spdy4" na barra de endereços do seu navegador Chrome e clique em “enable” se ele ainda não está habilitado.
+Digite “chrome://flags/\#enable-spdy4" na barra de endereços do seu navegador Chrome e clique em “enable” se ele ainda não está habilitado.
 
 ## 10.2. Somente TLS
 
@@ -20,4 +20,5 @@ Existem plugins do Chrome disponíveis que ajudam a visualizar se um _site_ est�
 
 ## 10.4. QUIC
 
-Experiências atuais do Chrome com QUIC (veja seção 12.1) diluem os números HTTP/2 de alguma maneira.
+Experiências atuais do Chrome com QUIC \(veja seção 12.1\) diluem os números HTTP/2 de alguma maneira.
+

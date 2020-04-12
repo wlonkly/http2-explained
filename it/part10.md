@@ -8,7 +8,7 @@ Il supporto nativo per SPDY verrà eventualmente eliminato. Il progetto ha comun
 
 ## 10.1. Per prima cosa, accertarsi di averlo abilitato
 
-Digitare “chrome://flags/#enable-spdy4" nella barra indirizzi e cliccare su “enable” se non fosse gia abilitato.
+Digitare “chrome://flags/\#enable-spdy4" nella barra indirizzi e cliccare su “enable” se non fosse gia abilitato.
 
 ## 10.2. Solo TLS
 
@@ -20,4 +20,5 @@ Sono disponibili plugin per Chrome che aiutano a visualizzare se un sito stia ut
 
 ## 10.4. QUIC
 
-Gli attuali esperimenti di Chrome e l'impiego di QUIC (vedi sezione 12.1) fanno sì che il numero di connessioni HTTP/2 sia in diminuzione.
+Gli attuali esperimenti di Chrome e l'impiego di QUIC \(vedi sezione 12.1\) fanno sì che il numero di connessioni HTTP/2 sia in diminuzione.
+

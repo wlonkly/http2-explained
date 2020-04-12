@@ -10,11 +10,11 @@ Geliştirilmiş bir protokol yapmak hoş olmaz mıydı? Elbette olurdu...
 
 ## 4.1. IETF ve HTTPbis çalışma grubu
 
-İnternet Mühendisliği Görev Gücü(IETF), çoğunlukla protokol seviyesinde, internet standartlarını geliştiren ve tanıtan bir organizasyondur. TCP, DNS, FTP'den en iyi uygulamalara, HTTP'ye ve çok sayıda protokol türevine varıncaya kadar her şeyi belgeleyen RFC dokümanları için dünya çapında yaygınca bilinirler.
- 
-IETF içinde, bir hedefe doğru çalışmak için "çalışma grupları" sınırlı bir kapsam ile oluşturulmuştur.  Ürettikleri şey için bazı belirlenmiş yönergeler ve sınırlamalar içeren bir "charter" (tanımlama) oluştururlar. Tartışmalara ve gelişmelere herkesin katılmasına izin verilir.  Katılan ve bir şeyler söyleyen herkes, sonuca etki eden aynı ağırlığa ve şansa sahiptir ve herkes, kendisi için çalıştığı şirkete pek saygı duymaksızın, bir birey olarak sayılır.
+İnternet Mühendisliği Görev Gücü\(IETF\), çoğunlukla protokol seviyesinde, internet standartlarını geliştiren ve tanıtan bir organizasyondur. TCP, DNS, FTP'den en iyi uygulamalara, HTTP'ye ve çok sayıda protokol türevine varıncaya kadar her şeyi belgeleyen RFC dokümanları için dünya çapında yaygınca bilinirler.
 
-HTTPbis çalışma grubu (adın açıklaması için daha sonra inceleyelim) 2007 yazında kuruldu ve HTTP 1.1 şartnamesinin güncellenmesi görevini üstlendi.  Bu grup içinde HTTP'nin bir sonraki sürümü ile ilgili tartışmalar 2012'nin sonlarında gerçekten başladı.  HTTP 1.1 güncelleme çalışması 2014 yılının başında tamamlandı ve [RFC 7230](https://tools.ietf.org/html/rfc7230) serisi ile sonuçlandı.
+IETF içinde, bir hedefe doğru çalışmak için "çalışma grupları" sınırlı bir kapsam ile oluşturulmuştur. Ürettikleri şey için bazı belirlenmiş yönergeler ve sınırlamalar içeren bir "charter" \(tanımlama\) oluştururlar. Tartışmalara ve gelişmelere herkesin katılmasına izin verilir. Katılan ve bir şeyler söyleyen herkes, sonuca etki eden aynı ağırlığa ve şansa sahiptir ve herkes, kendisi için çalıştığı şirkete pek saygı duymaksızın, bir birey olarak sayılır.
+
+HTTPbis çalışma grubu \(adın açıklaması için daha sonra inceleyelim\) 2007 yazında kuruldu ve HTTP 1.1 şartnamesinin güncellenmesi görevini üstlendi. Bu grup içinde HTTP'nin bir sonraki sürümü ile ilgili tartışmalar 2012'nin sonlarında gerçekten başladı. HTTP 1.1 güncelleme çalışması 2014 yılının başında tamamlandı ve [RFC 7230](https://tools.ietf.org/html/rfc7230) serisi ile sonuçlandı.
 
 HTTPbis WG için gerçekleşen son görüşmeler, Haziran 2014'ün başında New York'ta yapıldı. Geri kalan tartışmalar ve resmi RFC'yi almak için gerçekleştirilen IETF prosedürleri ertesi yıl devam etti.
 
@@ -28,4 +28,5 @@ Grup, HTTPbis olarak adlandırıldı ve burada "bis" kısmı iki Latin alfabesin
 
 [SPDY](https://en.wikipedia.org/wiki/SPDY) Google tarafından geliştirilen ve öncülük eden bir protokoldür. Kesinlikle bunu açık alanda geliştirdiler ve herkesi katılmaya davet ettiler, ancak hem popüler bir tarayıcı uygulaması hem de iyi kullanılan servislere sahip önemli bir sunucu popülasyonu üzerinde kontrol sahibi olduklarından yararlandıkları açıktır.
 
-HTTPbis grubu http2 üzerinde çalışmaya başlamanın zamanı olduğuna karar verdiklerinde, SPDY zaten bir çalışma konsepti olduğunu kanıtlamıştı. İnternette konuşlandırmanın mümkün olduğunu göstermiş ve ne kadar iyi performansı olduğunu gösteren yayınlanmış rakamlar bulunmaktadır.  Http2 çalışması, temelde http2 taslak-00'a küçük bir arama ve değiştirme ile yapılan SPDY/3 taslağı ile başladı.
+HTTPbis grubu http2 üzerinde çalışmaya başlamanın zamanı olduğuna karar verdiklerinde, SPDY zaten bir çalışma konsepti olduğunu kanıtlamıştı. İnternette konuşlandırmanın mümkün olduğunu göstermiş ve ne kadar iyi performansı olduğunu gösteren yayınlanmış rakamlar bulunmaktadır. Http2 çalışması, temelde http2 taslak-00'a küçük bir arama ve değiştirme ile yapılan SPDY/3 taslağı ile başladı.
+

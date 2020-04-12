@@ -8,9 +8,9 @@ SPDY desteği sonunda ortadan kaldırılacaktır. Bir blog yazısında, şu şek
 
 ## 10.1. İlk olarak, etkinleştirildiğinden emin olun
 
-Tarayıcınızın adres çubuğuna “chrome://flags/#enable-spdy4" yazın ve etkinleştirilmiş olarak göstermiyorsa "etkinleştir" seçeneğini tıklayın.
+Tarayıcınızın adres çubuğuna “chrome://flags/\#enable-spdy4" yazın ve etkinleştirilmiş olarak göstermiyorsa "etkinleştir" seçeneğini tıklayın.
 
-## 10.2. TLS-only(Sadece-TLS)
+## 10.2. TLS-only\(Sadece-TLS\)
 
 Firefox'un yalnızca TLS üzerinden http2 uyguladığını unutmayın. Firefox'da yalnızca https: // sitelerine giderken http2'yi göreceksiniz.
 
@@ -20,4 +20,5 @@ Bir site http2 kullanıyorsa görselleştirmeye yardımcı olan Firefox eklentil
 
 ## 10.4. QUIC
 
-Chrome'un QUIC ile gerçekleştirdiği deneyler (see section 12.1) HTTP/2 çalışmalarını etkiler.
+Chrome'un QUIC ile gerçekleştirdiği deneyler \(see section 12.1\) HTTP/2 çalışmalarını etkiler.
+

@@ -1,6 +1,6 @@
 # 7. Extensions
 
-The http2 protocol mandates that a receiver must read and ignore all unknown frames (those with an unknown frame type). Two parties can negotiate the use of new frame types on a hop-by-hop basis, but those frames aren't allowed to change state and they will not be flow controlled.
+The http2 protocol mandates that a receiver must read and ignore all unknown frames \(those with an unknown frame type\). Two parties can negotiate the use of new frame types on a hop-by-hop basis, but those frames aren't allowed to change state and they will not be flow controlled.
 
 The subject of whether http2 should allow extensions at all was debated at length during the protocol's development with opinions swinging for and against. After draft-12 the pendulum swung back one last time and extensions were ultimately allowed.
 
@@ -12,10 +12,7 @@ With the adoption of http2, there are reasons to suspect that TCP connections wi
 
 This will affect how HTTP load balancers work and there may arise situations when a site wants to suggest that the client connect to another host. It could be for performance reasons, or if a site is being taken down for maintenance, etc.
 
-The server will send the [Alt-Svc:
-header](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-10) (or ALTSVC
-frame with http2) telling the client about an alternative service: another
-route to the same content, using another service, host, and port number.
+The server will send the [Alt-Svc: header](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-10) \(or ALTSVC frame with http2\) telling the client about an alternative service: another route to the same content, using another service, host, and port number.
 
 A client should then attempt to connect to that service asynchronously and only use the alternative if the new connection succeeds.
 
@@ -27,13 +24,9 @@ This is a somewhat debatable feature. Such a connection would do unauthenticated
 
 ## 7.2. Blocked
 
-A frame of this type is meant to be sent exactly once by an http2 party when
-it has data to send off but flow control forbids it to send any data. The idea
-is that if your implementation receives this frame you know you
-have messed up something and/or you're getting less than perfect
-transfer speeds.
+A frame of this type is meant to be sent exactly once by an http2 party when it has data to send off but flow control forbids it to send any data. The idea is that if your implementation receives this frame you know you have messed up something and/or you're getting less than perfect transfer speeds.
 
 A quote from draft-12, before this frame was moved out to become an extension:
 
-> “The BLOCKED frame is included in this draft version to facilitate experimentation.  If the results of the experiment do not provide positive feedback, it could be removed”
+> “The BLOCKED frame is included in this draft version to facilitate experimentation. If the results of the experiment do not provide positive feedback, it could be removed”
 

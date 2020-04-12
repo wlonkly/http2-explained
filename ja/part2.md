@@ -26,11 +26,11 @@ HTTP 1.1でTCPのすべての能力を使いこなすのは困難でした。HTT
 
 下の図が示す通り、この傾向はしばらく続いていて、近々変化するという兆しは見受けられません。下の図は世界において最も人気のあるWEBサイトをサーブするときの全体の転送サイズ（緑）、全リクエスト数の平均（赤）の増加、およびそれらが過去4年間でどのように変化したのかを示しています。
 
-![転送量の増加](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
+![&#x8EE2;&#x9001;&#x91CF;&#x306E;&#x5897;&#x52A0;](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
 ## 2.5 レイテンシーでwebが死ぬ
 
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png)
 
 HTTP 1.1はレイテンシーにとても敏感です。HTTPパイプライニングが諸々の問題により大多数のユーザーにおいて無効化されていることもその理由の一つです。
 
@@ -42,7 +42,7 @@ HTTP 1.1はレイテンシーにとても敏感です。HTTPパイプライニ�
 
 HTTPパイプライニングは前のリクエストの応答を待っている間に次のリクエストを送信するというものです。これは銀行やスーパーマーケットのカウンターで列に並ぶことに似ています。あなたのひとり前の人が素早くすましてくれる人なのか、とても際限なく時間のかかる面倒な人なのかは知るよしもありません。これがヘッドオブライン・ブロッキングです。
 
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg)
 
 確かに注意深く列を選ぶことで回避できるかもしれません。また時には自分で新しい列を作ることもできるでしょう。しかしこのような決断をするということ自体を避けることは不可能であり、一旦決断した後は列を変えることはできないのです。
 
@@ -51,3 +51,4 @@ HTTPパイプライニングは前のリクエストの応答を待っている�
 2015年の今日においてもほとんどのデスクトップwebブラウザーはHTTPパイプライニングを既定値で無効にしています。
 
 これに関するさらなる情報については、例えばFirefoxの[bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354)で得ることができます。
+

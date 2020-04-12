@@ -24,20 +24,21 @@ Compile o curl utilizando versões atuais do OpenSSL ou NSS para obter suporte p
 
 ## 11.4. Uso na linha de comando
 
-Para dizer ao curl para utilizar http2, seja texto puro ou sobre TLS, deve ser utilizada a opção `--http2` (que é “traço traço http2”). O padrão no curl ainda é HTTP/1.1, portanto a opção extra é necessária para indicar o uso de http2.
+Para dizer ao curl para utilizar http2, seja texto puro ou sobre TLS, deve ser utilizada a opção `--http2` \(que é “traço traço http2”\). O padrão no curl ainda é HTTP/1.1, portanto a opção extra é necessária para indicar o uso de http2.
 
 ## 11.5. Opções libcurl
 
 ### 11.5.1 Habilitar HTTP/2
 
-Sua aplicação deve utilizar URLs https:// ou http:// normalmente, mas setar a opção `CURLOPT_HTTP_VERSION` do curl_easy_setopt para `CURL_HTTP_VERSION_2` para fazer uma tentativa do libcurl utilizar http2. Ele tentará conectar via http2 se for possível, mas continuará utilizando HTTP 1.1 caso ocorra algum problema.
+Sua aplicação deve utilizar URLs https:// ou http:// normalmente, mas setar a opção `CURLOPT_HTTP_VERSION` do curl\_easy\_setopt para `CURL_HTTP_VERSION_2` para fazer uma tentativa do libcurl utilizar http2. Ele tentará conectar via http2 se for possível, mas continuará utilizando HTTP 1.1 caso ocorra algum problema.
 
 ### 11.5.2 Multiplexação
 
-Como libcurl tenta manter o comportamento existente o máximo possível, será necessário habilitar multiplexação HTTP/2 para sua aplicação com a opção [CURLMOPT_PIPELINING](https://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html). Caso contrário, continuará utilizando uma requisição de cada vez por conexão.
+Como libcurl tenta manter o comportamento existente o máximo possível, será necessário habilitar multiplexação HTTP/2 para sua aplicação com a opção [CURLMOPT\_PIPELINING](https://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html). Caso contrário, continuará utilizando uma requisição de cada vez por conexão.
 
-Outro pequeno detalhe para ter em mente é que se várias requisições forem solicitadas de uma só vez com libcurl, utilizando sua interface múltipla, uma aplicação pode iniciar qualquer número de transferências de uma vez. Caso seja necessário que o libcurl espere um pouco para adicioná-las na mesma conexão, ao invés de abrir novas conexões para todas elas, a opção [CURLOPT_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) pode ser utilizada para cada transferência que você prefira esperar.
+Outro pequeno detalhe para ter em mente é que se várias requisições forem solicitadas de uma só vez com libcurl, utilizando sua interface múltipla, uma aplicação pode iniciar qualquer número de transferências de uma vez. Caso seja necessário que o libcurl espere um pouco para adicioná-las na mesma conexão, ao invés de abrir novas conexões para todas elas, a opção [CURLOPT\_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) pode ser utilizada para cada transferência que você prefira esperar.
 
 ### 11.5.3 Server push
 
-libcurl 7.44.0 e posteriores suportam HTTP/2 server push. Para utilizar esta funcionalidade, indique um callback na opção [CURLMOPT_PUSHFUNCTION](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html). Se a aplicação aceitar o _push_, uma nova transferência será criada utilizando “CURL easy handle” e o conteúdo será entregue nele, assim como qualquer outra transferência.
+libcurl 7.44.0 e posteriores suportam HTTP/2 server push. Para utilizar esta funcionalidade, indique um callback na opção [CURLMOPT\_PUSHFUNCTION](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html). Se a aplicação aceitar o _push_, uma nova transferência será criada utilizando “CURL easy handle” e o conteúdo será entregue nele, assim como qualquer outra transferência.
+

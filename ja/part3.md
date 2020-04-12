@@ -3,7 +3,8 @@
 問題に直面した時はいつも人々は集まって回避策を考えます。中には使いやすい案もあるし、ゴミのように役に立たない案もあります。
 
 ## 3.1 スプライティング
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/spriting.jpg" />
+
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/spriting.jpg)
 
 小さな画像をより集めて一つの大きな画像に結合することをスプライティングと言います。JavaScriptやCSSを使って大きな画像から個々の小さな画像を"切り取り"表示させるのです。
 
@@ -15,14 +16,15 @@
 
 インライニングは個々の画像を送信することを回避する別のトリックで、CSSファイルに埋め込んだdata: URLを使います。これはスプライティングと同じ長所と短所を持っています。
 
-    .icon1 {
-        background: url(data:image/png;base64,<data>) no-repeat;
-    }
+```text
+.icon1 {
+    background: url(data:image/png;base64,<data>) no-repeat;
+}
 
-    .icon2 {
-        background: url(data:image/png;base64,<data>) no-repeat;
-    }
-
+.icon2 {
+    background: url(data:image/png;base64,<data>) no-repeat;
+}
+```
 
 ## 3.3 コンカチネーション
 
@@ -42,4 +44,5 @@
 
 下図はスウェーデンのトップwebサイトの一つをブラウジングしたとき、パケットのトレースがどうなっているか、そしてどのようにリクエストが複数のホスト名に分散されているかを示しています。
 
-![expressen.seにおける画像のシャーディング](https://raw.githubusercontent.com/bagder/http2-explained/master/images/expressen-sharding.jpg)
+![expressen.se&#x306B;&#x304A;&#x3051;&#x308B;&#x753B;&#x50CF;&#x306E;&#x30B7;&#x30E3;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;](https://raw.githubusercontent.com/bagder/http2-explained/master/images/expressen-sharding.jpg)
+

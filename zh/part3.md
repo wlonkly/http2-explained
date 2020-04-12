@@ -4,7 +4,7 @@
 
 ## 3.1 Spriting
 
-<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/spriting.jpg" />
+![](https://raw.githubusercontent.com/bagder/http2-explained/master/images/spriting.jpg)
 
 Spriting是一种将很多较小的图片合并成一张大图，再用JavaScript或者CSS将小图重新“切割”出来的技术。
 
@@ -16,12 +16,14 @@ Spriting是一种将很多较小的图片合并成一张大图，再用JavaScrip
 
 Inlining是另外一种防止发送很多小图请求的技巧，它将图片的原始数据嵌入在CSS文件里面的URL里。而这种方案的优缺点跟Spriting很类似。
 
-    .icon1 {
-        background: url(data:image/png;base64,<data>) no-repeat;
-	  }
-    .icon2 {
-        background: url(data:image/png;base64,<data>) no-repeat;
-	  }
+```text
+.icon1 {
+    background: url(data:image/png;base64,<data>) no-repeat;
+  }
+.icon2 {
+    background: url(data:image/png;base64,<data>) no-repeat;
+  }
+```
 
 ## 3.3 拼接（Concatenation）
 
@@ -42,3 +44,4 @@ Inlining是另外一种防止发送很多小图请求的技巧，它将图片的
 下面的图片展示了访问一个瑞典著名网站的时产生的数据包，请注意这些请求是如何被分发到不同主机的。
 
 ![image sharding at expressen.se](https://raw.githubusercontent.com/bagder/http2-explained/master/images/expressen-sharding.jpg)
+

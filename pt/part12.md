@@ -8,8 +8,9 @@ O que você acha que ainda está faltando no http?
 
 ## 12.1. QUIC
 
-O protocolo [QUIC](https://www.chromium.org/quic) (Quick UDP Internet Connections) feito pelo Google é um experimento interessante, realizado no estilo e espírito que eles fizeram com o SPDY. QUIC é um substituto implementado em UDP para TCP + TLS + HTTP/2.
+O protocolo [QUIC](https://www.chromium.org/quic) \(Quick UDP Internet Connections\) feito pelo Google é um experimento interessante, realizado no estilo e espírito que eles fizeram com o SPDY. QUIC é um substituto implementado em UDP para TCP + TLS + HTTP/2.
 
 QUIC permite a criação de conexões com muito menos latência, resolve a perda de pacotes bloqueando apenas os fluxos individuais, ao invés de todos eles como faz o HTTP/2, e permite que novas conexões sejam feitas em diferentes interfaces de rede facilmente - também cobrindo áreas que o MPTCP pretende resolver.
 
 QUIC é, por enquanto, implementado somente pelo Google no Chrome e em seus servidores e esse código não é facilmente reutilizado em outro lugar, mesmo que haja um esforço nesse sentido, como a [libquic](https://github.com/devsisters/libquic). O protocolo está em [draft](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) para o grupo de trabalho de transporte IETF.
+

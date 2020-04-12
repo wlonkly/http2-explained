@@ -10,7 +10,7 @@ SPDY support was removed in Chrome 51 in favor of http2. In a blog post, the pro
 
 If you use a very old Chrome version you may want to check if the support is there.
 
-Enter “chrome://flags/#enable-spdy4" in your browser's address bar and click “enable” if it isn't already showing it as enabled. This flag has been removed in recent version and the support is now always implied.
+Enter “chrome://flags/\#enable-spdy4" in your browser's address bar and click “enable” if it isn't already showing it as enabled. This flag has been removed in recent version and the support is now always implied.
 
 ## 10.2. TLS-only
 
@@ -22,4 +22,5 @@ There are Chrome plugins available that helps visualize if a site is using HTTP/
 
 ## 10.4. QUIC
 
-Chrome's current experiments with QUIC (see section 12.1) dilute the HTTP/2 numbers somewhat.
+Chrome's current experiments with QUIC \(see section 12.1\) dilute the HTTP/2 numbers somewhat.
+

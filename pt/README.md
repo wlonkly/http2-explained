@@ -1,22 +1,14 @@
-http2 explicado
-===============
+# http2 explicado
 
-Este é um documento detalhado descrevendo HTTP/2 ([RFC
-7540](https://httpwg.github.io/specs/rfc7540.html)), Os antecedentes, conceitos,
-protocolo e algo sobre implementações existentes e o que o futuro
-pode trazer.
+Este é um documento detalhado descrevendo HTTP/2 \([RFC 7540](https://httpwg.github.io/specs/rfc7540.html)\), Os antecedentes, conceitos, protocolo e algo sobre implementações existentes e o que o futuro pode trazer.
 
-Veja https://daniel.haxx.se/http2/ para a casa canônica deste projeto.
+Veja [https://daniel.haxx.se/http2/](https://daniel.haxx.se/http2/) para a casa canônica deste projeto.
 
-Veja https://github.com/bagder/http2-explained para o código fonte de todos os conteúdos do
-livro.
+Veja [https://github.com/bagder/http2-explained](https://github.com/bagder/http2-explained) para o código fonte de todos os conteúdos do livro.
 
-CONTRIBUIR
-------------
+## CONTRIBUIR
 
-Eu incentivo e acolho a ajuda e contribuições de todos os que possam oferecer melhorias.
-Nós aceitamos [pull
-requests](https://github.com/bagder/http2-explained/pulls), mas também pode apenas
-abrir [issues](https://github.com/bagder/http2-explained/issues) ou enviar um email para daniel-http2@haxx.se com as suas sugestões!
+Eu incentivo e acolho a ajuda e contribuições de todos os que possam oferecer melhorias. Nós aceitamos [pull requests](https://github.com/bagder/http2-explained/pulls), mas também pode apenas abrir [issues](https://github.com/bagder/http2-explained/issues) ou enviar um email para daniel-http2@haxx.se com as suas sugestões!
 
- / Daniel Stenberg
+/ Daniel Stenberg
+

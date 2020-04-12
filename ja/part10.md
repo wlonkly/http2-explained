@@ -8,11 +8,11 @@ SPDYサポートは削除される予定です。[2015年2月](https://blog.chro
 
 ## 10.1. まず最初にhttp2が有効になっているか確かめてください
 
-ブラウザーのアドレスバーに”chrome://flags/#enable-spdy4”と入力し、まだ有効になっていない場合は、”enable”をクリックします。
+ブラウザーのアドレスバーに”chrome://flags/\#enable-spdy4”と入力し、まだ有効になっていない場合は、”enable”をクリックします。
 
 ## 10.2. TLS限定
 
-Chromeはhttp2をTLS上でのみ実装することを忘れないでください。Chromeではhttps://のhttp2をサポートするサイトでのみhttp2は動作します。
+Chromeはhttp2をTLS上でのみ実装することを忘れないでください。Chromeでは[https://のhttp2をサポートするサイトでのみhttp2は動作します。](https://のhttp2をサポートするサイトでのみhttp2は動作します。)
 
 ## 10.3. HTTP/2の使用を可視化する
 
@@ -21,3 +21,4 @@ Chromeはhttp2をTLS上でのみ実装することを忘れないでください
 ## 10.4. QUIC
 
 現在行われているChromeによるQUIC（12.1を参照）の試験が、HTTP/2の使用率を幾分下げています。
+
